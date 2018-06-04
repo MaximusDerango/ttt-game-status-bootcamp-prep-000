@@ -11,7 +11,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.detect?{|l| l.uniq.length == 1 && ["X", "O"].include?(lin.uniq[0])}
+  WIN_COMBINATIONS.detect?{|l| l.uniq.length == 1 && ["X", "O"].include?(l.uniq[0])}
 end
 
 def full?(board)

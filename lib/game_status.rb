@@ -11,5 +11,5 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.detect?{|line| line.uniq.length == 1}
+  WIN_COMBINATIONS.detect?{|lin| lin.uniq.length == 1 && ["X", "O"].include?(lin.uniq)}
 end

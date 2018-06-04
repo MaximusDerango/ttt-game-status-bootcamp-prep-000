@@ -20,7 +20,7 @@ def full?(board)
 end
 
 def draw?(board)
-  full?(board) && not won?(board)
+  full?(board) && !won?(board)
 end
 
 def over?(board)

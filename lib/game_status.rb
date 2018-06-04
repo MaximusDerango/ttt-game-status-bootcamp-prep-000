@@ -12,7 +12,7 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.detect{|l| 
-    l.select{|x| position_taken?(board, x)}.collect{|x| board[x]}.uniq.length == 1}
+    l.collect{|x| board[x]}.uniq.length == 1 && position_taken?(board, l[0])}
 end
 
 def full?(board)

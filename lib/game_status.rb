@@ -11,5 +11,21 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.detect?{|lin| lin.uniq.length == 1 && ["X", "O"].include?(lin.uniq)}
+  WIN_COMBINATIONS.detect?{|lin| lin.uniq.length == 1 && ["X", "O"].include?(lin.uniq[0])}
+end
+
+def full?(board)
+  board.all?{|x| x == "X" || x == "O"}
+end
+
+def draw?(board)
+  full?(board) && won?(board) == false
+end
+
+def over?(board)
+  won?(board) || draw?(board)
+end
+
+def winner?(board)
+  won?(board).collect{|x| x.uniq}
 end

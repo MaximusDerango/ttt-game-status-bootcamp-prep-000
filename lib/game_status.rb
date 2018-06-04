@@ -11,7 +11,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.detect?{|l| 
+  WIN_COMBINATIONS.detect{|l| 
     l.select{|x| position_taken?(board, x)}.collect{|x| board[x]}.uniq.length == 1}
 end
 

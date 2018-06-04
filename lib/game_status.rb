@@ -11,5 +11,5 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.any?{|line| line.all?{|pos| board[pos] == 
+  WIN_COMBINATIONS.any?{|line| line.uniq.length == 1}
 end
